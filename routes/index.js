@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var quizControl = require ('../controllers/quiz_controller');
+var quiz = require ('../controllers/quiz');
 
 
 /* GET home page. */
@@ -8,11 +8,13 @@ router.get('/', function(req, res, next) {
   res.render('index', {title: 'Quiz'});
 });
 
+/* GET credits page. */
 router.get('/credits', function(req, res, next){
-	res.render('credits');
+	res.render('credits', {title: 'Autores'} );
 });
 
-router.get('/quizzes', quizControl.index);
+/* GET quizzes page. */
+router.get('/quizzes', quiz.index);
 
 
 module.exports = router;

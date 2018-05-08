@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html>
-
-<h1>Lista de quizzes </h1>
-<ul> 
-  <% for (var i in quizzes) { %>
-  <% const quiz = quizzes[i]; %>
-  <li> <%= quiz.question %> : <%= quiz.answer %>
-  <% } %>
-</ul>
-
+    <h1>Lista de todos los quizzes</h1>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <ol> 
+        <% for (var i in quizzes) { %>
+        <% const quiz = quizzes[i]; %>
+        <li> <%= quiz.question %> : <%= quiz.answer %></li>
+        <% } %>
+    </ol>
 </html>
